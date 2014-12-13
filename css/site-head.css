@@ -1,0 +1,100 @@
+body {
+  color: #666;
+}
+.site-mast {
+  /* Positioning */
+  width: 100%;
+  /* Box-model */
+
+  /* Typography */
+  background-color: #b81650;
+  /* Visual */
+
+  /* Misc */
+}
+
+.site-mast-branding {
+  width: 1200px;
+  height: 103px;
+  margin: 0 auto;
+}
+
+/*.site-mast-nav {*/
+  /*height: 34px;*/
+  /*margin: 0 auto;*/
+  /*background-color: #ed5176;*/
+/*}*/
+
+.site-logo {
+  float: left;
+  width: 121px;
+  height: 55px;
+  margin-top: 29px;
+  overflow: hidden;
+  text-indent: -100%;
+  /*border: solid 1px #000000;*/
+  background-image: url("../img/logo.png");
+}
+
+.site-mast-nav,
+.site-mast-nav * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.site-mast-nav,
+.site-mast-nav ul {
+  list-style: none;
+  width: 100%;
+  height: 34px;
+  float: left;
+  background-color: #ed5176;
+  margin: 0;
+}
+
+.site-mast-nav li {
+  float: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .site-mast-nav li {
+    width: 10%;
+    *width: 24.9%; /* IE7 Hack */
+    _width: 19%; /* IE6 Hack */
+  }
+}
+
+.site-mast-nav a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  background: #ed5176;
+  border-left: 1px solid #b81650;
+  padding: 0.38em 1em;
+  float: left;
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse a {
+    margin: 0;
+    padding: 1em;
+    float: left;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid white;
+  }
+}
+
+.site-mast-nav ul ul a {
+  background: #ca3716;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 40em) {
+  .site-mast-nav ul ul a {
+    display: none;
+  }
+}
