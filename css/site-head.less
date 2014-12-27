@@ -1,15 +1,20 @@
 body {
   color: #666;
 }
+
+@site-mast-background-color: #b81650;
+
 .site-mast {
   width: 100%;
-  background-color: #b81650;
+  background-color: @site-mast-background-color;
 }
+
 .site-mast-branding {
   width: 1200px;
   height: 103px;
   margin: 0 auto;
 }
+
 .site-logo {
   float: left;
   width: 121px;
@@ -21,37 +26,45 @@ body {
   /*border: solid 1px #000000;*/
   background-image: url("../img/logo.png");
 }
+
+
+@site-nav-background-color: #ed5176;
+@site-nav-fontcolor: #fff;
+
 .nav-tabs {
-  background-color: #ed5176;
+  background-color: @site-nav-background-color;
   padding-left: 2%;
 }
+
 .nav-border {
   border: 0;
   border-radius: 0;
 }
+
 .nav-tabs > li.active > a {
-  color: #ffffff;
-  background-color: #b81650;
-  border: 0;
-  border-radius: 0;
+  color: @site-nav-fontcolor;
+  background-color: @site-mast-background-color;
+  .nav-border;
+  :hover, :focus {
+    background-color: @site-mast-background-color;
+    .nav-border;
+  }
 }
-.nav-tabs > li.active > a :hover,
-.nav-tabs > li.active > a :focus {
-  background-color: #b81650;
-  border: 0;
-  border-radius: 0;
-}
+
 .nav-tabs > li > a {
   border-radius: 0;
 }
+
 .nav > li > a {
   color: #fff;
 }
+
 a.thumbnail:hover {
   border: 1px solid #e684a2;
   box-shadow: 0 1px 4px;
-  text-decoration: none;
+  text-decoration: none
 }
+
 a.thumbnail > img {
   padding-top: 4px;
 }
