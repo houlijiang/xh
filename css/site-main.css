@@ -21,6 +21,12 @@
   text-decoration: line-through;
   font-size: 10px;
 }
+.price-color p {
+  height: 30px;
+  overflow: hidden;
+  font-size: 9px;
+  margin-bottom: 0;
+}
 a.thumbnail {
   border-radius: 0;
   padding: 0;

@@ -38,8 +38,10 @@
 }
 .banner li {
   list-style: none;
+  background-size: 522px 265px;
 }
 .banner ul li {
   float: left;
-  min-height: 350px;
+  height: 265px;
+  width: 522px;
 }

@@ -1,3 +1,15 @@
 .site-list .container {
   margin-top: 25px;
 }
+.site-list h4 {
+  padding-bottom: 10px;
+  border-bottom: solid 1px #e6e6e6;
+}
+.site-list .row {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+.list-details {
+  height: 265px;
+  border: solid 1px #e6e6e6;
+}
