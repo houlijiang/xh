@@ -5,9 +5,8 @@ class MY_Loader extends CI_Loader {
     {
         parent::__construct();
     }
-    function set_path($path=''){
-    	if(!empty($path)){
-    		$this->_ci_view_paths = array(APPPATH.'views/'.$path.'/'	=> TRUE);
-    	}
+    function set_path(){
+    	//	$this->_ci_view_paths = array(APPPATH.'views/'.$path.'/'	=> TRUE);
+    		$this->_ci_view_paths = array('./'=>true);
     }
 }

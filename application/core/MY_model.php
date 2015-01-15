@@ -6,17 +6,6 @@ class MY_model extends CI_Model{
 		parent::__construct();
 		$this->load->library("data");
 	}
-	public function tojson($code=100,$message='',$url=''){
-		$arr = array(
-			'statusCode'=>$code,
-			'message'=>$message,
-			'navTabId'=>'',
-			'rel'=>'',
-			'callbackType'=>'closeCurrent', //forward  closeCurrent
-			'forwardUrl'=>$url
-		);
-		die(json_encode($arr,JSON_UNESCAPED_UNICODE));
-	}
 	
 	public function page(&$post){
 		$page = isset($post['pageNum'])?intval($post['pageNum']):1;
@@ -26,12 +15,15 @@ class MY_model extends CI_Model{
 		$page = $page<=1?1:$page;
 		$post['limit'] = ($page-1)*$page_size;
 	}
-    function get_fields($table){
-    	$fields = $this->data->db->field_data($table);
-    	foreach($fields as $f){
-    		$arr[]=$f->name;
+    function post(){
+    	$post = $this->input->post();
+    	$get = $this->input->get();
+    	if(!empty($get)){
+	    	foreach($get as $k=>$v){
+	    		$post[$k]=$v;
+	    	}
     	}
-    	return $arr;
+    	return $post;
     }
 	public function update($table=''){
 		$id = $this->input->post('id');

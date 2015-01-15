@@ -1,7 +1,7 @@
 <?php
 class goods_model extends MY_Model{
-	public function get_list($cat_id=0){
-		$post = $this->input->post();
+	public function get_list($cat_id=0,$page=0,$page_size=10){
+		$post = $this->post();
 		$post['cat_id'] = $cat_id>0?$cat_id:$post['cat_id'];
 		$where = "where a.is_delete=0";
 		if(isset($post['cat_id']) && $post['cat_id']>0){
@@ -21,8 +21,7 @@ class goods_model extends MY_Model{
 		}
 		$sql = "select a.*,b.cat_name,c.user_name from cms_goods a left join cms_category b on a.cat_id=b.id left join cms_admin_user c on a.admin_id=c.id $where";
 		$post['total'] = $this->data->getNums($sql);
-		$this->page($post);
-		$sql .=" order by a.id desc limit {$post['limit']},{$post['page_size']}";
+		$sql .=" order by a.id desc limit $page,$page_size";
 		$post['list'] = $this->data->getAll($sql);
 		return $post;
 	}
