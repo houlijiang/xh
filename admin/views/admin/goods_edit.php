@@ -55,6 +55,10 @@
 				<input name="goods_price" class="number" type="text" size="30" alt="请输入数字" value="<?php echo $info['sale_number']?>"/>
 			</p>
 			<p>
+				<label>商品排序：</label>
+				<input name="sort" class="number" type="text" size="30" alt="请输入数字" value="<?php echo $info['sort']?>"/>
+			</p>
+			<p>
 				<label>商品链接：</label>
 				<input name="url" class="url" type="text" size="30" alt="网址" value="<?php echo $info['url']?>"/>
 			</p>

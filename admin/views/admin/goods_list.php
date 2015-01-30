@@ -48,6 +48,7 @@
 				<th width="10%">价格</th>
 				<th width="10%">分类</th>
 				<th width="10%">状态</th>
+				<th width="10%">排序</th>
 				<th width="10%">发布人</th>
 				<th width="10%">时间</th>
 				<th width="5%">操作</th>
@@ -61,6 +62,7 @@
 				<td><?php echo $v['goods_price']?></td>
 				<td><?php echo $v['cat_name']?></td>
 				<td><?php echo $v['state']>0?'上架':'下架'?></td>
+				<td><?php echo $v['sort']?></td>
 				<td><?php echo $v['user_name']?></td>
 				<td><?php echo $v['create_time']?></td>
 				<td><?php echo anchor('/goods/edit/'.$v['id'],'编辑','target="navTab" rel="edit" class="btnEdit"')?></td>

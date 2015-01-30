@@ -11,9 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/site-head.css">
-        <link rel="stylesheet" href="css/site-main.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/site-head.css">
+        <link rel="stylesheet" href="/css/site-main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <!-- 只让 IE 8 以及更低版本的浏览器下载该脚本  -->
         <!--[if (lt IE 9) & (!IEMobile)]>
@@ -28,134 +28,39 @@
         <!-- Add your site or application content here -->
         <header class="site-mast">
             <!-- site master head -->
-            <div class="site-mast-branding">
+            <div class="site-mast-branding container">
                 <a class="site-logo" href="#" gaevent="header/logo">新婚网</a>
-                <span class="site-tip">标语</span>
             </div>
             <!-- bannar-->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" ><a href="#">首页</a></li>
-                    <li role="presentation" class="active"><a href="#">促销喜品</a></li>
-                    <li role="presentation"><a href="#">结婚吧</a></li>
+                <ul class="nav nav-tabs " role="tablist">
+                    <li role="presentation" class="active"><a href="/home">首页</a></li>
+                    <li role="presentation" ><a href="#">促销喜品</a></li>
+                    <li role="presentation"><a href="/hunba">结婚吧</a></li>
                 </ul>
         </header>
         <!-- site main-->
         <div class="site-main">
             <div class="container">
                 <div class="row">
-
+					<?PHP foreach($list as $v):?>
                     <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
+                        <a class="thumbnail" href="<?PHP echo $v['url'];?>">
+                            <img src="<?PHP echo img_url($v['goods_thumb']);?>" alt="..." >
                             <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
+                                <h4>¥ <?PHP echo $v['goods_price'];?><span>原价¥ <?PHP echo $v['market_price'];?></span></h4>
+                                <p><?PHP echo $v['goods_name'];?></p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="#">
-                            <img src="img/goods.png" alt="..." >
-                            <div class="caption price-color">
-                                <h4>¥ 359.00<span>原价¥ 500.00</span></h4>
-                                <p>【震撼·登场】梦幻唯美蕾丝大拖尾婚纱！欧式经典抹胸设计，唯美而时尚，优雅高贵，加以璀璨的亮片钉珠点缀，华丽而不张扬，修身的版型设计，凸显性感曲线，在这个优美的结婚季，穿着这件奢华的婚纱，和心爱的另一半一起走进婚姻的殿堂，是一种华丽的享受</p>
-                            </div>
-                        </a>
-                    </div>
+                    <?PHP endforeach;?>
+                    
                 </div>
                 <nav class="pagination-align">
-                    <img src="img/page-girl.png">
+                    <img src="/img/page-girl.png">
                     <ul class="pagination">
-                        <li class="disabled"><a href="#">&laquo;</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
+                        <?PHP echo $page?>
                     </ul>
-                    <img src="img/page-boy.png">
+                    <img src="/img/page-boy.png">
                 </nav>
             </div>
         </div>

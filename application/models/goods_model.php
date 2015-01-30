@@ -21,7 +21,7 @@ class goods_model extends MY_Model{
 		}
 		$sql = "select a.*,b.cat_name,c.user_name from cms_goods a left join cms_category b on a.cat_id=b.id left join cms_admin_user c on a.admin_id=c.id $where";
 		$post['total'] = $this->data->getNums($sql);
-		$sql .=" order by a.id desc limit $page,$page_size";
+		$sql .=" order by a.sort desc limit $page,$page_size";
 		$post['list'] = $this->data->getAll($sql);
 		return $post;
 	}
