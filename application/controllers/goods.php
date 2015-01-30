@@ -10,6 +10,8 @@ class goods extends MY_Controller{
 	}
 	public function view($id=0){
 		$data = $this->goods_model->get_info($id);
-		$this->load->view('goods',$data);
+		$this->goods_model->count($id);
+		redirect($data['url']);
+		//$this->load->view('goods',$data);
 	}
 }

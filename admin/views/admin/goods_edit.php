@@ -52,7 +52,7 @@
 			</p>
 			<p>
 				<label>商品销量：</label>
-				<input name="goods_price" class="number" type="text" size="30" alt="请输入数字" value="<?php echo $info['sale_number']?>"/>
+				<input name="sale_number" class="number" type="text" size="30" alt="请输入数字" value="<?php echo $info['sale_number']?>"/>
 			</p>
 			<p>
 				<label>商品排序：</label>

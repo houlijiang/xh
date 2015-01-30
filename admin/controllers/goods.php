@@ -13,4 +13,8 @@ class goods extends MY_Controller{
 	public function _edit(&$data){
 		$data['cat_list'] =$this->category_model->data_list(1);
 	}
+	public function _before_update(){
+		$this->load->helper('file');
+		delete_files('./application/cache/', TRUE);
+	}
 }

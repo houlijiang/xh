@@ -2,7 +2,7 @@
 class MY_Controller extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
-		$this->load->set_path();
+	//	$this->load->set_path();
 	}
 	public function page($url,$uri=3,$total,$page_size=10){
 		$this->load->library('pagination');

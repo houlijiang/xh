@@ -28,4 +28,8 @@ class goods_model extends MY_Model{
 	public function get_info($id=0){
 		return $this->data->getRow("select * from cms_goods where id=$id");
 	}
+	public function count($id=0){
+		$sql = "update cms_goods set count=count+1 where id=$id";
+		return $this->data->query($sql);
+	}
 }

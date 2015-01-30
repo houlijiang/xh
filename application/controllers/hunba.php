@@ -1,6 +1,7 @@
 <?php
 class hunba extends MY_Controller{
 	public function index(){
-		$this->load->view('list.html');
+		$data['title'] = "新婚520";
+		$this->load->view('hunba_home',$data);
 	}
 }

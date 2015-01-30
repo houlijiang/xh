@@ -44,7 +44,7 @@
                 <div class="row">
 					<?PHP foreach($list as $v):?>
                     <div class="col-sm-6 col-md-3">
-                        <a class="thumbnail" href="<?PHP echo $v['url'];?>">
+                        <a class="thumbnail" target="_blank" href="/goods/view/<?PHP echo $v['id'];?>">
                             <img src="<?PHP echo img_url($v['goods_thumb']);?>" alt="..." >
                             <div class="caption price-color">
                                 <h4>¥ <?PHP echo $v['goods_price'];?><span>原价¥ <?PHP echo $v['market_price'];?></span></h4>
